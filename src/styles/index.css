@@ -1,3 +1,7 @@
+:root {
+  --main-color: #1e1f29;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +12,13 @@ body {
 
 }
 
-button:focus {outline:0;}
+button {
+  cursor: pointer;
+}
 
 .navbar {
-  background-color: #cccccc;
+  background-color: var(--main-color);
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,18 +49,12 @@ li {
   padding: 0 20px;
 }
 
-
-
 .SearchBar {
   align-items: center;
   height: 400px;
-  background-color: #91d77d;
+  background-color: var(--main-color);
   display: flex;
   justify-content: center;
-}
-
-.search-form {
-
 }
 
 .search-bar-button {
