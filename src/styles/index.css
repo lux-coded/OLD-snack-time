@@ -1,5 +1,7 @@
 :root {
   --main-color: #1e1f29;
+  --main-color-darker: #0b0c11;
+  --light-color: #454e7a;
 }
 
 * {
@@ -9,7 +11,7 @@
 }
 
 body {
-
+  background-color: var(--main-color);
 }
 
 button {
@@ -17,7 +19,7 @@ button {
 }
 
 .navbar {
-  background-color: var(--main-color);
+  background-color: var(--main-color-darker);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -51,13 +53,15 @@ li {
 
 .SearchBar {
   align-items: center;
-  height: 400px;
+  height: 100px;
   background-color: var(--main-color);
   display: flex;
   justify-content: center;
 }
 
 .search-bar-button {
+  background-color: var(--light-color);
+  color: white;
   margin: 0 2rem;
   padding: 0;
   height: 50px;
