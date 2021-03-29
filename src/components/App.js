@@ -1,10 +1,16 @@
 import React from 'react';
-import NavBar from './NavBar.js';
+import NavBar from './NavBar/NavBar.js';
+import SearchBar from './SearchBar.js';
 
 class App extends React.Component {
 
   render() {
-    return <NavBar />;
+    return (
+      <div>
+        <NavBar />
+        <SearchBar />
+      </div>
+    );
   }
 }
 
