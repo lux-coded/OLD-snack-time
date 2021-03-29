@@ -7,3 +7,71 @@
 body {
 
 }
+
+button:focus {outline:0;}
+
+.navbar {
+  background-color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20%;
+}
+
+.nav-logo {
+  font-weight: 300;
+}
+
+.nav-link-container li {
+  font-weight: 300;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  font-weight: 300;
+}
+
+.nav-link h3 {
+  font-weight: 300;
+}
+
+li {
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+
+
+.SearchBar {
+  align-items: center;
+  height: 400px;
+  background-color: #91d77d;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+
+}
+
+.search-bar-button {
+  margin: 0 2rem;
+  padding: 0;
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+}
+
+.search-input {
+  height: 50px;
+  width: 40vw;
+  border-radius: 25px;
+  font-size: 20px;
+  border: none;
+  padding: 0;
+  padding-left: 2rem;
+}

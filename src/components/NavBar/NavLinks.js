@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../styles/NavLinks.css';
 
 class NavLinks extends React.Component {
 
