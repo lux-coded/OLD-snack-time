@@ -1,30 +1,30 @@
 import React from 'react';
-import themoviedb from '../api/themoviedb.js';
 
 class SearchBar extends React.Component {
-  // state = { search: '' };
+  state = { search: '' };
 
-  async onChangeHandler(e) {
-    e.preventDefault();
-    // this.setState({ search: e.target.value });
-
-    const response = await themoviedb.get(`/search/photos`, {
-      params: { query: e.target.value },
-    });
-
-    console.log(response);
-  }
-
-  onSubmitHandler(event) {
+  async onSubmitHandler(event) {
     event.preventDefault();
+    // console.log(this.state.search);
+
+    try {
+      const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${this.state.search}`);
+      const data = response.json();
+      console.log(data);
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   render() {
     return (
       <div className='SearchBar'>
-        <form onSubmit={this.onChangeHandler} className='search-form'>
-          <input type='text' placeholder='Looking for a movie or a show?' /*value={this.state.search} onChange={this.onChangeHandler}*/ className='search-input'>
-
+        <form onSubmit={this.onSubmitHandler.bind(this)} className='search-form'>
+          <input
+          type='text'
+          placeholder='Looking for a movie or a show?'
+          value={this.state.search}
+          onChange={(e) => this.setState({ search: e.target.value })} className='search-input'>
           </input>
           <button className='search-bar-button'>Hey</button>
         </form>
