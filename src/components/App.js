@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar/NavBar.js';
-import SearchBar from './SearchBar.js';
+import Search from './Search.js';
 
 class App extends React.Component {
 
@@ -8,7 +8,8 @@ class App extends React.Component {
     return (
       <div>
         <NavBar />
-        <SearchBar />
+        <Search />
+
       </div>
     );
   }

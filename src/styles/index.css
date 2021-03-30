@@ -1,7 +1,8 @@
 :root {
   --main-color: #1e1f29;
   --main-color-darker: #0b0c11;
-  --light-color: #454e7a;
+  --light-color: #51bce4;
+  --mainTransition: all 0.07s ease-in-out;
 }
 
 * {
@@ -60,7 +61,7 @@ li {
 }
 
 .search-bar-button {
-  background-color: var(--light-color);
+  background: linear-gradient(45deg, rgba(29, 127, 191, 1) 0%, rgba(61, 238, 111, 1) 100%);
   color: white;
   margin: 0 2rem;
   padding: 0;
@@ -69,6 +70,11 @@ li {
   font-size: 20px;
   border: none;
   border-radius: 25px;
+}
+
+.search-bar-button:hover {
+  transform: scale(1.03);
+  transition: var(--mainTransition);
 }
 
 .search-input {
