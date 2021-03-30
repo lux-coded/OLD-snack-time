@@ -1,6 +1,7 @@
 :root {
   --main-color: #1e1f29;
   --main-color-darker: #0b0c11;
+  --main-color-lighter: #434655;
   --light-color: #51bce4;
   --mainTransition: all 0.07s ease-in-out;
 }
@@ -85,4 +86,27 @@ li {
   border: none;
   padding: 0;
   padding-left: 2rem;
+}
+
+.search-results {
+  padding: 0 5%;
+}
+
+.result-card {
+  height: 200px;
+  color: white;
+  background-color: var(--main-color-lighter);
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.result-card-details {
+  padding: 1rem 2rem;
+}
+
+.result-img {
+  height: 100%;
+  border-radius: 1rem;
+  /* overflow: hidden; */
 }

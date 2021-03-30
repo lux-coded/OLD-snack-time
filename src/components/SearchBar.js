@@ -1,30 +1,18 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
-  state = { searchQuery: '', searchResults: [], page: null };
+  state = { searchQuery: '' };
 
-  async onSubmitHandler(event) {
+  onFormSubmit = (event) => {
     event.preventDefault();
-    // console.log(this.state.search);
 
-    try {
-      const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${this.state.searchQuery}`);
-      const data = await response.json();
-      const { results } = data;
-      console.log(data);
-      console.log(results);
-
-      this.setState({ searchResults: [...results], page: data.page });
-
-    } catch (e) {
-      console.log(e);
-    }
-  }
+    this.props.onSubmit(this.state.searchQuery)
+  };
 
   render() {
     return (
       <div className='SearchBar'>
-        <form onSubmit={this.onSubmitHandler.bind(this)} className='search-form'>
+        <form onSubmit={this.onFormSubmit} className='search-form'>
           <input
             type='text'
             placeholder='Looking for a movie or a show?'
