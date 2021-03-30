@@ -8,9 +8,10 @@ class SearchBar extends React.Component {
     // console.log(this.state.search);
 
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${this.state.search}`);
+      const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${this.state.search}`);
       const data = response.json();
       console.log(data);
+      return data;
     } catch (e) {
       console.log(e);
     }
