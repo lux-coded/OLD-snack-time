@@ -236,7 +236,7 @@ h2:link {
 
 .banner-image-container img {
   width: 70%;
-  filter: blur(5px) brightness(50%);
+  filter: brightness(50%);
 }
 
 .detail-result-img {

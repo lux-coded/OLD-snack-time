@@ -23,7 +23,7 @@ class DetailPage extends React.Component {
     return (
       <div className='detail-info-container'>
         <div className='banner-image-container'>
-          <img alt='movie_image' className='banner-img' src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`}></img>
+          <img alt='movie_image' className='banner-img' src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}></img>
         </div>
         <div className='movie-info'>
           <img alt='movie_image' className='detail-result-img' src={`https://image.tmdb.org/t/p/w500/${poster_path}`}></img>
