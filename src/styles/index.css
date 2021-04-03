@@ -206,7 +206,9 @@ li {
   background-color: var(--main-color-lighter);
   border-radius: 20px;
   display: flex;
-  transform: translateY(-300px);
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-30%); */
 }
 
 .movie-details {
@@ -218,7 +220,7 @@ li {
 }
 
 .banner-image-container img {
-  width: 70%;
+  width: 100%;
   filter: blur(5px);
 }
 

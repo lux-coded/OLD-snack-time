@@ -1,13 +1,16 @@
 import React from 'react';
 
 class DetailPage extends React.Component {
-  state = { details: {} };
+  state = { details: {}, genreArray: [] };
   componentDidMount() {
     try {
       fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US`)
       .then(res => res.json())
       .then(result => {
         this.setState({ details: result});
+        result.genres.map((item) => {
+          this.setState({ genreArray: [...item.name]});
+        })
         console.log(result);
       });
     } catch (e) {
@@ -26,6 +29,7 @@ class DetailPage extends React.Component {
           <img alt='movie_image' className='detail-result-img' src={`https://image.tmdb.org/t/p/w500/${poster_path}`}></img>
           <div className='movie-details'>
             <h1>{title}</h1>
+            <h2>{this.state.genreArray}</h2>
             <h3>{release_date}</h3>
             <h5>Runtime: {runtime} minutes</h5>
             <p>{overview}</p>
