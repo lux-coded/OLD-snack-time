@@ -1,6 +1,8 @@
 import React from 'react';
 import SearchBar from './SearchBar.js';
 import SearchResults from './SearchResults.js';
+import PageButtons from './PageButtons.js';
+import MovieOrShow from './MovieOrShow.js';
 
 class Search extends React.Component {
   state = { searchResults: [], page: null };
@@ -24,9 +26,12 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='search-page'>
+        <MovieOrShow />
         <SearchBar onSubmit={this.onSubmitHandler.bind(this)}/>
+        <PageButtons page={this.state.page}/>
         <SearchResults searchResults={this.state.searchResults}/>
+        <PageButtons page={this.state.page}/>
       </div>
     );
   }
