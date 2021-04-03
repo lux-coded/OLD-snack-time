@@ -6,6 +6,7 @@ import Search from './Search.js';
 import TopRated from './TopRated.js';
 import Upcoming from './Upcoming.js';
 import Popular from './Popular.js';
+import DetailPage from './DetailPage.js';
 
 class App extends React.Component {
   state = { results: [] };
@@ -25,6 +26,8 @@ class App extends React.Component {
             <Route path='/top-rated' exact component={TopRated} />
             <Route path='/popular' exact component={Popular} />
             <Route path='/upcoming' exact component={Upcoming} />
+            <Route path='/movie/:id' exact component={DetailPage} />
+            <Route path='/show/:id' exact component={DetailPage} />
           </Switch>
         </Router>
 
