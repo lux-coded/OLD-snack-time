@@ -31,6 +31,14 @@ button {
   padding: 0 20%;
 }
 
+.nav-logo {
+  display: flex;
+}
+
+.nav-icon {
+  font-size: 36px;
+}
+
 .nav-logo, .nav-logo:visited {
   font-weight: 300;
   text-decoration: none;

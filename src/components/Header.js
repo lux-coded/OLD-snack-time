@@ -58,7 +58,12 @@ class Header extends React.Component {
   render() {
     return (
       <div className='navbar'>
-        <Link to='/' className='nav-logo'><h1 >SnackTime</h1></Link>
+        <Link to='/' className='nav-logo'>
+          <span class="material-icons nav-icon">
+            fastfood
+          </span>
+          <h1 >SnackTime</h1>
+        </Link>
         <div className='nav-link-container'>
           <Link to='/' className='nav-link'>User</Link>
           <Link to='/top-rated' className='nav-link'>Top Rated</Link>
