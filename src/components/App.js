@@ -6,7 +6,6 @@ import Search from './Search.js';
 import TopRated from './TopRated.js';
 import Upcoming from './Upcoming.js';
 import Popular from './Popular.js';
-import SearchResults from './SearchResults.js';
 
 class App extends React.Component {
   state = { results: [] };
