@@ -3,12 +3,12 @@ import SearchBar from './SearchBar.js';
 import SearchResults from './SearchResults.js';
 
 class Search extends React.Component {
-  state = { searchResults: [], page: null };
+  state = { searchResults: [], page: null, searchType: 'movie' };
 
   async onSubmitHandler(searchQuery) {
 
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${searchQuery}`);
+      const response = await fetch(`https://api.themoviedb.org/3/search/${this.state.searchType}?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${searchQuery}`);
       const data = await response.json();
       const { results } = data;
       // console.log(data);
@@ -16,7 +16,7 @@ class Search extends React.Component {
 
       this.setState({ searchResults: [...results], page: data.page });
 
-      console.log(this.state.searchResults);
+      // console.log(this.state.searchResults);
     } catch (e) {
       console.log(e);
     }
@@ -25,6 +25,10 @@ class Search extends React.Component {
   render() {
     return (
       <div className='search-page'>
+        <div>
+          <button onClick={() => this.setState({ searchType: 'movie' })}>Movie</button>
+          <button onClick={() => this.setState({ searchType: 'tv' })}>Show</button>
+        </div>
         <SearchBar onSubmit={this.onSubmitHandler.bind(this)}/>
         <SearchResults searchResults={this.state.searchResults}/>
       </div>

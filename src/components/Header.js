@@ -59,7 +59,7 @@ class Header extends React.Component {
     return (
       <div className='navbar'>
         <Link to='/' className='nav-logo'>
-          <span class="material-icons nav-icon">
+          <span className="material-icons nav-icon">
             fastfood
           </span>
           <h1 >SnackTime</h1>

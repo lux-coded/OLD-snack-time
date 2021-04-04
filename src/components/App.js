@@ -26,11 +26,10 @@ class App extends React.Component {
             <Route path='/top-rated' exact component={TopRated} />
             <Route path='/popular' exact component={Popular} />
             <Route path='/upcoming' exact component={Upcoming} />
-            <Route path='/movie/:id' exact component={DetailPage} />
-            <Route path='/show/:id' exact component={DetailPage} />
+            <Route path='/:mediaType/:id' exact component={DetailPage} />
+            {/* <Route path='/:show/:id' exact component={DetailPage} /> */}
           </Switch>
         </Router>
-
       </div>
     );
   }
