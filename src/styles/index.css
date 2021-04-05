@@ -108,7 +108,7 @@ li {
   justify-content: center;
 }
 
-.search-bar-button {
+.main-button {
   background: linear-gradient(45deg, rgba(29, 127, 191, 1) 0%, rgba(61, 238, 111, 1) 100%);
   color: white;
   margin: 0 2rem;
@@ -120,9 +120,30 @@ li {
   border-radius: 25px;
 }
 
-.search-bar-button:hover {
+.main-button:hover {
   transform: scale(1.03);
   transition: var(--mainTransition);
+}
+
+.media-type-button {
+  background: black;
+  color: white;
+  margin: 0 2rem;
+  padding: 0;
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+}
+
+.media-type-button:hover {
+  transform: scale(1.03);
+  transition: var(--mainTransition);
+}
+
+.button-active {
+  background: linear-gradient(45deg, rgba(29, 127, 191, 1) 0%, rgba(61, 238, 111, 1) 100%);
 }
 
 .search-input {

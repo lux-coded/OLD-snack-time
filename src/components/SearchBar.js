@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
             value={this.state.searchQuery}
             onChange={(e) => this.setState({ searchQuery: e.target.value })} className='search-input'>
           </input>
-          <button className='search-bar-button'>Search</button>
+          <button className='main-button'>Search</button>
         </form>
       </div>
     );

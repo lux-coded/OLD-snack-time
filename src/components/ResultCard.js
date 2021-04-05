@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class ResultCard extends React.Component {
 
   render() {
-    const { title, overview, poster_path, release_date, id, name } = this.props.result;
+    const { title, overview, poster_path, release_date, id, name, vote_average } = this.props.result;
     return (
 
       <div className='result-card'>
@@ -14,6 +14,7 @@ class ResultCard extends React.Component {
         <Link to={`/${title ? 'movie' : 'tv'}/${id}`} className='result-card-details'>
           <div>
             <h2>{title ? title : name}</h2>
+            <h3>{vote_average}/10</h3>
             <h4>{release_date}</h4>
             <p className='result-card-description'>{overview}</p>
           </div>

@@ -23,11 +23,11 @@ class App extends React.Component {
           <Header navLink={this.navBarLinkHandler}/>
           <Switch>
             <Route path='/' exact component={Search} />
+            <Route path='/search/:query' exact component={Search} />
             <Route path='/top-rated' exact component={TopRated} />
             <Route path='/popular' exact component={Popular} />
             <Route path='/upcoming' exact component={Upcoming} />
             <Route path='/:mediaType/:id' exact component={DetailPage} />
-            {/* <Route path='/:show/:id' exact component={DetailPage} /> */}
           </Switch>
         </Router>
       </div>
