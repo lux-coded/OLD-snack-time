@@ -13,7 +13,7 @@ class DetailPage extends React.Component {
           const genres = result.genres.map((item) => item.name);
           this.setState({ genreArray: genres });
         };
-        // console.log(result);
+        console.log(result);
       });
     } catch (e) {
       console.log(e);
@@ -21,7 +21,7 @@ class DetailPage extends React.Component {
   }
 
   render() {
-    const { poster_path, backdrop_path, title, overview, release_date, runtime, name } = this.state.details;
+    const { poster_path, backdrop_path, title, overview, release_date, runtime, name, vote_average } = this.state.details;
 
     return (
       <div className='detail-info-container'>
@@ -32,6 +32,7 @@ class DetailPage extends React.Component {
           <img alt='movie_image' className='detail-result-img' src={`https://image.tmdb.org/t/p/w500/${poster_path}`}></img>
           <div className='movie-details'>
             <h1>{title ? title : name}</h1>
+            <h2>{vote_average}/10</h2>
             <h2>{this.state.genreArray.join(', ')}</h2>
             <h3>{release_date}</h3>
             <h5>{this.props.match.params.mediaType === 'movie' ? `Runtime: ${runtime} minutes` :  `Seasons: ${this.state.tvSeasons}`}</h5>
