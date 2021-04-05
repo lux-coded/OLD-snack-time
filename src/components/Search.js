@@ -6,11 +6,11 @@ import history from '../history.js';
 class Search extends React.Component {
   state = { searchResults: [], page: 1, searchType: 'movie', searchQuery: '' };
 
-  async onSubmitHandler(searchQuery) {
+  async onSubmitHandler(searchQuery, page = this.state.page) {
     this.setState({ searchQuery });
 
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/search/${this.state.searchType}?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${searchQuery}&page=${this.state.page}`);
+      const response = await fetch(`https://api.themoviedb.org/3/search/${this.state.searchType}?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${searchQuery}&page=${page}`);
       const data = await response.json();
       const { results } = data;
       // console.log(data);
@@ -24,6 +24,10 @@ class Search extends React.Component {
     } catch (e) {
       console.log(e);
     }
+  }
+
+  pageHandler(page) {
+    this.onSubmitHandler(this.state.searchQuery, page);
   }
 
   render() {
@@ -41,8 +45,45 @@ class Search extends React.Component {
           >Show
           </button>
         </div>
+
         <SearchBar onSubmit={this.onSubmitHandler.bind(this)}/>
+
+        {this.state.searchResults.length > 0 ?
+          <div>
+            {this.state.page > 1 ?
+              <button
+                onClick={() => this.pageHandler(this.state.page - 1)}
+                className='main-button'
+              >Page {this.state.page - 1}
+              </button>
+            : ''}
+            <button
+              className='main-button'
+              onClick={() => this.pageHandler(this.state.page + 1)}
+            >Page {this.state.page + 1}
+            </button>
+          </div>: null
+        }
+
         <SearchResults searchResults={this.state.searchResults}/>
+
+        {this.state.searchResults.length > 0 ?
+          <div>
+            {this.state.page > 1 ?
+              <button
+                onClick={() => this.pageHandler(this.state.page - 1)}
+                className='main-button'
+              >Page {this.state.page - 1}
+              </button>
+            : ''}
+            <button
+              className='main-button'
+              onClick={() => this.pageHandler(this.state.page + 1)}
+            >Page {this.state.page + 1}
+            </button>
+          </div>: null
+        }
+
       </div>
     );
   }
