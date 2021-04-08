@@ -10,7 +10,7 @@ class Popular extends React.Component {
       .then(res => res.json())
       .then(result => {
         const { results } = result;
-        this.setState({ popularResults: [...results]});
+        this.setState({ popularResults: [...results] });
       });
 
     } catch (e) {

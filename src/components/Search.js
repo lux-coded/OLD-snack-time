@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar.js';
 import SearchResults from './SearchResults.js';
-import PaginationButtons from './PaginationButtons.js';
+import HomeCarousel from './HomeCarousel.js';
 import history from '../history.js';
 
 class Search extends React.Component {
@@ -34,6 +34,7 @@ class Search extends React.Component {
   render() {
     return (
       <div className='search-page'>
+
         <div>
           <button
             onClick={() => this.setState({ searchType: 'movie' })}
@@ -49,6 +50,8 @@ class Search extends React.Component {
 
         <SearchBar onSubmit={this.onSubmitHandler.bind(this)}/>
 
+
+
         {this.state.searchResults.length > 0 ?
           <div>
             {this.state.page > 1 ?
@@ -63,7 +66,11 @@ class Search extends React.Component {
               onClick={() => this.pageHandler(this.state.page + 1)}
             >Page {this.state.page + 1}
             </button>
-          </div>: null
+          </div>
+        :
+        <div className='home-carousel'>
+          <HomeCarousel />
+        </div>
         }
 
         <SearchResults searchResults={this.state.searchResults}/>

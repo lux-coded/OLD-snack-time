@@ -9,12 +9,6 @@ import Popular from './Popular.js';
 import DetailPage from './DetailPage.js';
 
 class App extends React.Component {
-  state = { results: [] };
-
-  navBarLinkHandler (navResults) {
-    this.setState({ results: navResults });
-    console.log(this.state.results);
-  }
 
   render() {
     return (

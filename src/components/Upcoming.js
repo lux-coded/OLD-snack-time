@@ -9,8 +9,9 @@ class Upcoming extends React.Component {
       fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=8c8d65e69723f72aa8f5c0911b107365`)
       .then(res => res.json())
       .then(result => {
+        // console.log(result);
         const { results } = result;
-        this.setState({ upcomingResults: [...results]});
+        this.setState({ upcomingResults: [...results] });
       });
 
     } catch (e) {

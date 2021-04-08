@@ -272,3 +272,16 @@ h2:link {
   height: 300px;
   border-radius: 20px;
 }
+
+.glider {
+  background-color: #f47979;
+  height: 300px;
+}
+
+.glider-item {
+  width: 100px;
+}
+
+.carousel-card {
+  height: 100px;
+}
