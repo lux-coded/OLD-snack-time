@@ -250,13 +250,14 @@ h2:link {
   background-color: var(--main-color-lighter);
   border-radius: 20px;
   display: flex;
-  position: absolute;
-  top: 70%;
+  /* position: absolute; */
+  /* top: 70%; */
   /* transform: translateY(-30%); */
 }
 
 .movie-details {
   padding: 1rem 2rem;
+  width: 80%;
 }
 
 .banner-image-container {
@@ -274,14 +275,39 @@ h2:link {
 }
 
 .glider {
-  background-color: #f47979;
-  height: 300px;
+  height: 400px;
 }
 
 .glider-item {
   width: 100px;
 }
 
+.carousel {
+  padding: 0 15%;
+}
+
 .carousel-card {
-  height: 100px;
+  height: 400px;
+  margin: 0 20px;
+  text-decoration: none;
+  border-radius: 1rem;
+}
+
+.carousel-result-card-details {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-image-container {
+  /* height: 200px; */
+  width: 200px;
+  border-radius: 1rem;
+}
+
+.carousel-result-img {
+  /* height: 100%; */
+  width: 100%;
+  margin: 0;
+  overflow:  hidden;
+  border-radius: 1rem;
 }

@@ -5,12 +5,27 @@ import SearchResults from './SearchResults.js';
 import CarouselCard from './CarouselCard.js';;
 
 class HomeCarousel extends React.Component {
-  state = { nowResults: [] };
+  state = { nowResults: [], carouselResults: [] };
 
   componentDidMount() {
-    this.getCarouselData();
+    try {
+      fetch(`https://api.themoviedb.org/3/movie/popular?api_key=8c8d65e69723f72aa8f5c0911b107365`)
+      .then(res => res.json())
+      .then(result => {
+        const { results } = result;
+        this.setState({ nowResults: [...results] });
+      });
+
+    } catch (e) {
+      console.log(e);
+    }
+
+
+
+    // this.setState({ carouselResults: [...results] });
+
     new Glider(document.querySelector('.glider'), {
-      slidesToShow: 6,
+      slidesToShow: 1,
       slidesToScroll: 1,
       draggable: true,
       // dots: '.dots',
@@ -35,35 +50,37 @@ class HomeCarousel extends React.Component {
   }
 
   render() {
-    // const results = this.state.nowResults.map((result) => {
-    //   // console.log(result);
-    //   return <CarouselCard key={result.id} result={result}/>
-    // })
-
     const results = this.state.nowResults.map((result) => {
       // console.log(result);
-      return (
-        <div key={result.id}>
-          {result.title}
-        </div>
-      )
+      return <CarouselCard key={result.id} result={result}/>
     })
 
-    console.log(results);
-
-    // console.log(Array.isArray(results));
+    // const results = this.state.nowResults.map((result) => {
+    //   // console.log(result);
+    //   return (
+    //     <div key={result.id}>
+    //       {result.title}
+    //     </div>
+    //   )
+    // });
 
     return (
       // <SearchResults searchResults={this.state.nowResults}/>
-      <div className="glider-contain">
-        <div className="glider">
-          {results}
-        </div>
+      <div className='carousel'>
+        <div className="glider-contain">
+          <div className="glider">
+            <div class="glider-track">
+              {results}
+            </div>
+            {/* {results} */}
+          </div>
 
-        <button aria-label="Previous" className="glider-prev">«</button>
-        <button aria-label="Next" className="glider-next">»</button>
-        <div role="tablist" className="dots"></div>
+          <button aria-label="Previous" className="glider-prev">«</button>
+          <button aria-label="Next" className="glider-next">»</button>
+          <div role="tablist" className="dots"></div>
+        </div>
       </div>
+
     );
   }
 }
