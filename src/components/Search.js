@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar.js';
 import SearchResults from './SearchResults.js';
+import PaginationButtons from './PaginationButtons.js';
 import history from '../history.js';
 
 class Search extends React.Component {

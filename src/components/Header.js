@@ -6,7 +6,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className='navbar'>
+      <header className='navbar'>
         <Link to='/' className='nav-logo'>
           <span className="material-icons nav-icon">
             fastfood
@@ -19,7 +19,7 @@ class Header extends React.Component {
           <Link to='/popular' className='nav-link'>Popular</Link>
           <Link to='/upcoming' className='nav-link'>Upcoming</Link>
         </div>
-      </div>
+      </header>
     );
   }
 }
