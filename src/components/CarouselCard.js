@@ -5,7 +5,7 @@ class CarouselCard extends React.Component {
 
   render() {
     const { title, poster_path, release_date, id, name, vote_average } = this.props.result;
-    // console.log(this.props.result);
+    console.log(this.props.result);
     return (
 
       <div className='carousel-card'>
@@ -14,8 +14,8 @@ class CarouselCard extends React.Component {
         </div>
         <Link to={`/${title ? 'movie' : 'tv'}/${id}`} className='carousel-result-card-details'>
           <div>
-            <h2>{title ? title : name}</h2>
-            <h3>{vote_average}/10</h3>
+            <h3>{title ? title : name}</h3>
+            <h3>Stars: {vote_average}</h3>
             <h4>{release_date}</h4>
           </div>
         </Link>

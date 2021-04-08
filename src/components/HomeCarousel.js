@@ -9,7 +9,7 @@ class HomeCarousel extends React.Component {
 
   componentDidMount() {
     try {
-      fetch(`https://api.themoviedb.org/3/movie/popular?api_key=8c8d65e69723f72aa8f5c0911b107365`)
+      fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=8c8d65e69723f72aa8f5c0911b107365`)
       .then(res => res.json())
       .then(result => {
         const { results } = result;
@@ -37,42 +37,19 @@ class HomeCarousel extends React.Component {
 
   }
 
-  async getCarouselData() {
-    try {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=8c8d65e69723f72aa8f5c0911b107365`)
-      const data = await response.json();
-      const { results } = data;
-      this.setState({ nowResults: [...results] });
-
-    } catch (e) {
-      console.log(e);
-    }
-  }
-
   render() {
     const results = this.state.nowResults.map((result) => {
       // console.log(result);
       return <CarouselCard key={result.id} result={result}/>
-    })
-
-    // const results = this.state.nowResults.map((result) => {
-    //   // console.log(result);
-    //   return (
-    //     <div key={result.id}>
-    //       {result.title}
-    //     </div>
-    //   )
-    // });
+    });
 
     return (
       // <SearchResults searchResults={this.state.nowResults}/>
       <div className='carousel'>
+        <h1 style={{ color: 'white' }}>Now Playing</h1>
         <div className="glider-contain">
-          <div className="glider">
-            <div class="glider-track">
-              {results}
-            </div>
-            {/* {results} */}
+          <div className="glider glider-track">
+            {results}
           </div>
 
           <button aria-label="Previous" className="glider-prev">«</button>

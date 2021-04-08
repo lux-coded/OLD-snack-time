@@ -287,20 +287,19 @@ h2:link {
 }
 
 .carousel-card {
-  height: 400px;
   margin: 0 20px;
-  text-decoration: none;
   border-radius: 1rem;
 }
 
 .carousel-result-card-details {
   text-decoration: none;
+  height: 100px;
   color: white;
 }
 
 .carousel-image-container {
   /* height: 200px; */
-  width: 200px;
+  width: 150px;
   border-radius: 1rem;
 }
 
@@ -308,6 +307,5 @@ h2:link {
   /* height: 100%; */
   width: 100%;
   margin: 0;
-  overflow:  hidden;
   border-radius: 1rem;
 }
