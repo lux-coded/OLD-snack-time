@@ -274,38 +274,38 @@ h2:link {
   border-radius: 20px;
 }
 
-.glider {
-  height: 400px;
-}
-
-.glider-item {
-  width: 100px;
-}
-
-.carousel {
-  padding: 0 15%;
-}
-
-.carousel-card {
-  margin: 0 20px;
-  border-radius: 1rem;
-}
-
-.carousel-result-card-details {
+.swiper-container {
+  padding: 2rem;
   text-decoration: none;
-  height: 100px;
+
+}
+
+.swiper-container a {
+  text-decoration: none;
   color: white;
 }
 
-.carousel-image-container {
-  /* height: 200px; */
-  width: 150px;
-  border-radius: 1rem;
+.swiper-slide {
+  filter: brightness(60%);
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 
-.carousel-result-img {
-  /* height: 100%; */
-  width: 100%;
-  margin: 0;
-  border-radius: 1rem;
+.swiper-slide:hover {
+  transform: scale(1.05);
+  filter: brightness(100%);
+}
+
+.swiper-slide__image {
+  height: 300px;
+  border-radius: 2rem;
+}
+
+.home-carousels {
+  padding: 3rem 10%;
+  color: white;
+}
+
+.home-carousels h2 {
+  text-align: left;
 }
