@@ -8,18 +8,18 @@ class CarouselCard extends React.Component {
     console.log(this.props.result);
     return (
 
-      <div className='carousel-card'>
+      <Link to={`/${title ? 'movie' : 'tv'}/${id}`} className='carousel-card'>
         <div className='carousel-image-container'>
           <img alt='movie_image' className='carousel-result-img' src={`https://image.tmdb.org/t/p/w500/${poster_path}`}></img>
         </div>
-        <Link to={`/${title ? 'movie' : 'tv'}/${id}`} className='carousel-result-card-details'>
+        <div className='carousel-result-card-details'>
           <div>
             <h3>{title ? title : name}</h3>
             <h3>Stars: {vote_average}</h3>
             <h4>{release_date}</h4>
           </div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     );
   }
 }
