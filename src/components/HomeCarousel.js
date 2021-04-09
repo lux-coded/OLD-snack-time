@@ -1,11 +1,12 @@
 import React from 'react';
-import Glider from 'glider-js'
-import '../styles/glider.css';
-import SearchResults from './SearchResults.js';
-import CarouselCard from './CarouselCard.js';;
+import CarouselCards from './CarouselCards.js';
+// import Swiper from 'swiper/bundle';
+// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+//
+// import 'swiper/swiper-bundle.css';
 
 class HomeCarousel extends React.Component {
-  state = { nowResults: [], carouselResults: [] };
+  state = { nowResults: [], carouselResults: [], topResults: [] };
 
   componentDidMount() {
     try {
@@ -20,44 +21,25 @@ class HomeCarousel extends React.Component {
       console.log(e);
     }
 
-
-
-    // this.setState({ carouselResults: [...results] });
-
-    new Glider(document.querySelector('.glider'), {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      draggable: true,
-      // dots: '.dots',
-      arrows: {
-        prev: '.glider-prev',
-        next: '.glider-next'
-      }
-    });
-
   }
 
+
   render() {
-    const results = this.state.nowResults.map((result) => {
-      // console.log(result);
-      return <CarouselCard key={result.id} result={result}/>
-    });
 
     return (
       // <SearchResults searchResults={this.state.nowResults}/>
       <div className='carousel'>
-        <h1 style={{ color: 'white' }}>Now Playing</h1>
-        <div className="glider-contain">
-          <div className="glider glider-track">
-            {results}
-          </div>
+        {/* <h1 style={{ color: 'white' }}>Now Playing</h1> */}
 
-          <button aria-label="Previous" className="glider-prev">«</button>
-          <button aria-label="Next" className="glider-next">»</button>
-          <div role="tablist" className="dots"></div>
-        </div>
+        <CarouselCards title='Now Playing' results={this.state.nowResults} />
+
+        <CarouselCards title='Top Rated' results={this.state.nowResults} />
+
+        <CarouselCards title='Upcoming' results={this.state.nowResults} />
+
+        <CarouselCards title='Popular' results={this.state.nowResults} />
+
       </div>
-
     );
   }
 }
