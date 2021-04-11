@@ -275,7 +275,7 @@ h2:link {
 }
 
 .swiper-container {
-  padding: 2rem;
+  padding: 1rem;
   text-decoration: none;
 
 }
@@ -286,6 +286,7 @@ h2:link {
 }
 
 .swiper-slide {
+  /* margin: 1rem; */
   filter: brightness(60%);
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
@@ -297,8 +298,8 @@ h2:link {
 }
 
 .swiper-slide__image {
-  height: 300px;
-  border-radius: 2rem;
+  height: 200px;
+  border-radius: 10px;
 }
 
 .home-carousels {
@@ -308,4 +309,5 @@ h2:link {
 
 .home-carousels h2 {
   text-align: left;
+  font-weight: 400;
 }
