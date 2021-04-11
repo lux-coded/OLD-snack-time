@@ -16,9 +16,9 @@ class CarouselCards extends React.Component {
         <h2>{this.props.title}</h2>
         <Swiper
           // spaceBetween={50}
-          slidesPerView={6}
+          slidesPerView={7}
           navigation
-          freemode='true'
+          // freemode={true}
           loop
           speed={100}
           // autoplay={{ delay: 1000 }}
