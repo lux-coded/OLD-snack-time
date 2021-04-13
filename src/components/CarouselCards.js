@@ -20,10 +20,10 @@ class CarouselCards extends React.Component {
           navigation
           // freemode={true}
           loop
-          speed={100}
+          // speed={200}
           // autoplay={{ delay: 1000 }}
           effectfade='true'
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
         >
           {this.props.results.map((result) => (
