@@ -1,11 +1,18 @@
 import React from 'react';
 import SearchBar from './SearchBar.js';
 import SearchResults from './SearchResults.js';
-import HomeCarousel from './HomeCarousel.js';
+import CarouselCards from './CarouselCards.js';
 import history from '../history.js';
+import { connect } from 'react-redux';
 
-class Search extends React.Component {
+import getMoviesNowPlaying from '../actions/movieActions/getMoviesNowPlaying';
+
+class Home extends React.Component {
   state = { searchResults: [], page: 1, searchType: 'movie', searchQuery: '' };
+
+  componentDidMount() {
+    this.handleMovieFetch();
+  }
 
   async onSubmitHandler(searchQuery, page = this.state.page) {
     this.setState({ searchQuery });
@@ -15,7 +22,7 @@ class Search extends React.Component {
       const data = await response.json();
       const { results } = data;
       // console.log(data);
-      console.log(results);
+      // console.log(results);
 
       this.setState({ searchResults: [...results], page: data.page });
 
@@ -29,6 +36,11 @@ class Search extends React.Component {
 
   pageHandler(page) {
     this.onSubmitHandler(this.state.searchQuery, page);
+  }
+
+
+  handleMovieFetch = () => {
+    this.props.getMoviesNowPlaying(`https://api.themoviedb.org/3/movie/now_playing?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
   }
 
   render() {
@@ -69,7 +81,13 @@ class Search extends React.Component {
           </div>
         :
         <div className='home-carousel'>
-          <HomeCarousel />
+          {/* <CarouselCards title='Now Playing' results={this.props.moviesNowPlaying.results} /> */}
+
+          {/* <CarouselCards title='Top Rated' results={this.props.moviesNowPlaying.results} /> */}
+
+          {/* <CarouselCards title='Upcoming' results={this.props.moviesNowPlaying.results} /> */}
+
+          {/* <CarouselCards title='Popular' results={this.props.moviesNowPlaying.results} /> */}
         </div>
         }
 
@@ -97,4 +115,15 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+const mapStateToProps = (state) => ({
+  moviesNowPlaying: state.getMoviesNowPlaying
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getMoviesNowPlaying: url => dispatch(getMoviesNowPlaying(url)),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

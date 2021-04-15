@@ -10,6 +10,7 @@ class TopRated extends React.Component {
       .then(res => res.json())
       .then(result => {
         const { results } = result;
+        console.log(result);
         this.setState({ topResults: [...results] });
       });
 
