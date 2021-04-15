@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar.js';
 import SearchResults from './SearchResults.js';
+import HeroCarousel from './HeroCarousel.js';
 import CarouselCards from './CarouselCards.js';
 import history from '../history.js';
 import { connect } from 'react-redux';
@@ -53,21 +54,24 @@ class Home extends React.Component {
     return (
       <div className='search-page'>
 
-        <div>
-          <button
-            onClick={() => this.setState({ searchType: 'movie' })}
-            className={`media-type-button ${this.state.searchType === 'movie' ? 'button-active' : ''}`}
-          >Movie
-          </button>
-          <button
-            onClick={() => this.setState({ searchType: 'tv' })}
-            className={`media-type-button ${this.state.searchType === 'tv' ? 'button-active' : ''}`}
-          >Show
-          </button>
+        <HeroCarousel results={this.props.moviesNowPlaying.results}/>
+        
+        <div className='search-area'>
+          <div>
+            <button
+              onClick={() => this.setState({ searchType: 'movie' })}
+              className={`media-type-button ${this.state.searchType === 'movie' ? 'button-active' : ''}`}
+            >Movie
+            </button>
+            <button
+              onClick={() => this.setState({ searchType: 'tv' })}
+              className={`media-type-button ${this.state.searchType === 'tv' ? 'button-active' : ''}`}
+            >Show
+            </button>
+          </div>
+
+          <SearchBar onSubmit={this.onSubmitHandler.bind(this)}/>
         </div>
-
-        <SearchBar onSubmit={this.onSubmitHandler.bind(this)}/>
-
 
 
         {this.state.searchResults.length > 0 ?
@@ -87,13 +91,13 @@ class Home extends React.Component {
           </div>
         :
         <div className='home-carousel'>
-          <CarouselCards title='Now Playing' results={this.props.moviesNowPlaying.results} />
+          <CarouselCards title='Now Playing' results={this.props.moviesNowPlaying.results} linkTag='now-playing'/>
 
-          <CarouselCards title='Top Rated' results={this.props.moviesTopRated.results} />
+          <CarouselCards title='Top Rated' results={this.props.moviesTopRated.results} linkTag='top-rated'/>
 
-          <CarouselCards title='Upcoming' results={this.props.moviesUpcoming.results} />
+          <CarouselCards title='Upcoming' results={this.props.moviesUpcoming.results} linkTag='upcoming'/>
 
-          <CarouselCards title='Popular' results={this.props.moviesPopular.results} />
+          <CarouselCards title='Popular' results={this.props.moviesPopular.results} linkTag='popular'/>
         </div>
         }
 

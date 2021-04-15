@@ -11,6 +11,8 @@
   padding: 0;
   font-family: 'Kanit', sans-serif;
   font-weight: 300;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 
 body {
@@ -79,7 +81,7 @@ li {
 
 .search-page {
   text-align: center;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
 }
 
 .media-type-buttons {
@@ -99,6 +101,10 @@ li {
   font-size: 20px;
   border: none;
   border-radius: 25px;
+}
+
+.search-area {
+  padding-top: 2rem;
 }
 
 .SearchBar {
@@ -274,8 +280,12 @@ h2:link {
   border-radius: 20px;
 }
 
-.swiper-container {
+.card-slides-container {
   padding: 1rem;
+}
+
+.swiper-container {
+  /* padding: 1rem; */
   text-decoration: none;
 
 }
@@ -285,14 +295,14 @@ h2:link {
   color: white;
 }
 
-.swiper-slide {
+.card-slides {
   /* margin: 1rem; */
   filter: brightness(60%);
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
 }
 
-.swiper-slide:hover {
+.card-slides:hover {
   transform: scale(1.05);
   filter: brightness(100%);
 }
@@ -302,12 +312,47 @@ h2:link {
   border-radius: 10px;
 }
 
+@media all and (max-width: 600px) {
+  .home-carousels {
+    padding: 3rem 1%;
+  }
+}
+
 .home-carousels {
   padding: 3rem 10%;
   color: white;
 }
 
 .home-carousels h2 {
-  text-align: left;
+  text-align: justify;
   font-weight: 400;
+  display: inline-block;
+}
+
+.carousel-section-names {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-section-names h2:hover {
+  color: #a6a6a6;
+  transform: translateY(-3px);
+}
+
+.hero-carousel {
+  /* height: 600px; */
+}
+
+.hero-slide__image {
+  width: 100%;
+}
+
+.hero-slide {
+  height: 800px;
+}
+
+.hero-slide__title {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
 }
