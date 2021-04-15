@@ -344,15 +344,16 @@ h2:link {
 }
 
 .hero-slide__image {
-  width: 100%;
+  width: 70%;
 }
 
 .hero-slide {
-  height: 800px;
+  /* height: 800px; */
 }
 
 .hero-slide__title {
-  position: absolute;
-  bottom: 100px;
-  left: 100px;
+  position: relative;
+  right: 15%;
+  transform: translateY(-5rem);
+  font-size: 48px;
 }
