@@ -6,6 +6,9 @@ import history from '../history.js';
 import { connect } from 'react-redux';
 
 import getMoviesNowPlaying from '../actions/movieActions/getMoviesNowPlaying';
+import getMoviesTopRated from '../actions/movieActions/getMoviesTopRated';
+import getMoviesUpcoming from '../actions/movieActions/getMoviesUpcoming';
+import getMoviesPopular from '../actions/movieActions/getMoviesPopular';
 
 class Home extends React.Component {
   state = { searchResults: [], page: 1, searchType: 'movie', searchQuery: '' };
@@ -41,6 +44,9 @@ class Home extends React.Component {
 
   handleMovieFetch = () => {
     this.props.getMoviesNowPlaying(`https://api.themoviedb.org/3/movie/now_playing?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
+    this.props.getMoviesTopRated(`https://api.themoviedb.org/3/movie/top_rated?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
+    this.props.getMoviesUpcoming(`https://api.themoviedb.org/3/movie/upcoming?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
+    this.props.getMoviesPopular(`https://api.themoviedb.org/3/movie/popular?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
   }
 
   render() {
@@ -81,13 +87,13 @@ class Home extends React.Component {
           </div>
         :
         <div className='home-carousel'>
-          {/* <CarouselCards title='Now Playing' results={this.props.moviesNowPlaying.results} /> */}
+          <CarouselCards title='Now Playing' results={this.props.moviesNowPlaying.results} />
 
-          {/* <CarouselCards title='Top Rated' results={this.props.moviesNowPlaying.results} /> */}
+          <CarouselCards title='Top Rated' results={this.props.moviesTopRated.results} />
 
-          {/* <CarouselCards title='Upcoming' results={this.props.moviesNowPlaying.results} /> */}
+          <CarouselCards title='Upcoming' results={this.props.moviesUpcoming.results} />
 
-          {/* <CarouselCards title='Popular' results={this.props.moviesNowPlaying.results} /> */}
+          <CarouselCards title='Popular' results={this.props.moviesPopular.results} />
         </div>
         }
 
@@ -116,11 +122,17 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  moviesNowPlaying: state.getMoviesNowPlaying
+  moviesNowPlaying: state.getMoviesNowPlaying,
+  moviesTopRated: state.getMoviesTopRated,
+  moviesUpcoming: state.getMoviesUpcoming,
+  moviesPopular: state.getMoviesPopular,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   getMoviesNowPlaying: url => dispatch(getMoviesNowPlaying(url)),
+  getMoviesTopRated: url => dispatch(getMoviesTopRated(url)),
+  getMoviesUpcoming: url => dispatch(getMoviesUpcoming(url)),
+  getMoviesPopular: url => dispatch(getMoviesPopular(url)),
 });
 
 export default connect(
