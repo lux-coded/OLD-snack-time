@@ -11,7 +11,7 @@ class Header extends React.Component {
           <span className="material-icons nav-icon">
             fastfood
           </span>
-          <h1 >SnackTime</h1>
+          <h1>SnackTime</h1>
         </Link>
         <div className='nav-link-container'>
           <Link to='/' className='nav-link'>User</Link>
