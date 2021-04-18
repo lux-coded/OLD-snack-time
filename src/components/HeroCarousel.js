@@ -31,8 +31,10 @@ class HeroCarousel extends React.Component {
 
             <SwiperSlide key={result.id} className="swiper-slide hero-slide">
               <Link to={`/${result.title ? 'movie' : 'tv'}/${result.id}`} >
-                <img className="hero-slide__image" src={`https://image.tmdb.org/t/p/original/${result.backdrop_path}`} alt={result.title} />
-                <h1 className="hero-slide__title">{result.title}</h1>
+                <div className='hero-slide__image-container'>
+                  <img className="hero-slide__image" src={`https://image.tmdb.org/t/p/original/${result.backdrop_path}`} alt={result.title} />
+                  <h1 className="hero-slide__title">{result.title}</h1>
+                </div>
               </Link>
             </SwiperSlide>
           ))}

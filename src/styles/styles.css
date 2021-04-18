@@ -311,23 +311,22 @@ h2:link {
   transform: translateY(-3px);
 }
 
-.hero-carousel {
-  /* height: 600px; */
-}
-
 .hero-slide__image {
-  width: 70%;
-}
-
-.hero-slide {
-  /* height: 800px; */
+  width: 100%;
+  filter: brightness(60%);
 }
 
 .hero-slide__title {
-  position: relative;
-  right: 15%;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  text-align: left;
   transform: translateY(-5rem);
-  font-size: 48px;
+  font-size: 72px;
+}
+
+.hero-slide {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=styles.css.map */
