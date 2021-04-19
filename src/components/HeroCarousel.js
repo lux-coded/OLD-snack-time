@@ -16,7 +16,7 @@ class HeroCarousel extends React.Component {
         <Swiper
           // spaceBetween={50}
           slidesPerView={1}
-          navigation
+          // navigation
           // direction='vertical'
           // mouseWheel='true'
           // freemode={true}

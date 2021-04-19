@@ -35,7 +35,7 @@ button {
 }
 
 .nav-icon {
-  font-size: 36px;
+  font-size: 2.5rem;
 }
 
 .nav-link-container li {
@@ -176,11 +176,6 @@ h2:link {
 }
 
 .result-card-details {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   padding: 1rem 2rem;
   position: absolute;
@@ -287,13 +282,57 @@ h2:link {
   border-radius: 10px;
 }
 
-@media all and (max-width: 600px) {
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .hero-slide__title {
+    font-size: 3rem;
+    bottom: 10%;
+  }
+
   .home-carousels {
-    padding: 3rem 1%;
+    padding: 3rem 5%;
+  }
+
+  .hero-slide {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .hero-slide__title {
+    font-size: 3rem;
+    bottom: 10%;
+  }
+
+  .home-carousels {
+    padding: 3rem 5%;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .hero-slide__title {
+    font-size: 4rem;
+    bottom: 15%;
+  }
+
+  .home-carousels {
+    padding: 3rem 5%;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-slide__title {
+    font-size: 5rem;
+    bottom: 15%;
+  }
+
+  .home-carousels {
+    padding: 3rem 10%;
+  }
+}
+@media (min-width: 1500px) {
+  .hero-slide__title {
+    font-size: 7rem;
+    bottom: 25%;
   }
 }
 .home-carousels {
-  padding: 3rem 10%;
   color: white;
 }
 .home-carousels h2 {
@@ -311,6 +350,10 @@ h2:link {
   transform: translateY(-3px);
 }
 
+.hero-slide__image-container {
+  position: relative;
+}
+
 .hero-slide__image {
   width: 100%;
   filter: brightness(60%);
@@ -318,15 +361,8 @@ h2:link {
 
 .hero-slide__title {
   position: absolute;
-  bottom: 10%;
   left: 5%;
   text-align: left;
-  transform: translateY(-5rem);
-  font-size: 72px;
-}
-
-.hero-slide {
-  height: 100vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

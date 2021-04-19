@@ -43,7 +43,7 @@ button {
 }
 
 .nav-icon {
-  font-size: 36px;
+  font-size: 2.5rem;
 }
 
 .nav-link-container {
@@ -196,11 +196,11 @@ h2 {
 }
 
 .result-card-details {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  // -webkit-touch-callout: none;
+  // -webkit-user-select: none;
+  // -khtml-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
   user-select: none;
   padding: 1rem 2rem;
   position: absolute;
@@ -314,14 +314,79 @@ h2 {
   border-radius: 10px;
 }
 
-@media all and (max-width: 600px) {
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .hero-slide__title {
+    font-size: 3rem;
+    bottom: 10%;
+  }
+
   .home-carousels {
-    padding: 3rem 1%;
+    padding: 3rem 5%;
+  }
+
+  .hero-slide {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px)  {
+  .hero-slide__title {
+    font-size: 3rem;
+    bottom: 10%;
+  }
+
+  .home-carousels {
+    padding: 3rem 5%;
+  }
+
+  .hero-slide {
+    // height: 50px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px)  {
+  .hero-slide__title {
+    font-size: 4rem;
+    bottom: 15%;
+  }
+
+  .home-carousels {
+    padding: 3rem 5%;
+  }
+
+  .hero-slide {
+    // height: 90vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-slide__title {
+    font-size: 5rem;
+    bottom: 15%;
+  }
+
+  .home-carousels {
+    padding: 3rem 10%;
+  }
+
+  .hero-slide {
+    // height: 100vh;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero-slide__title {
+    font-size: 7rem;
+    bottom: 25%;
+  }
+
+  .hero-slide {
+    // height: 100vh;
   }
 }
 
 .home-carousels {
-  padding: 3rem 10%;
+  // padding: 3rem 10%;
   color: white;
 
   h2 {
@@ -342,28 +407,28 @@ h2 {
 }
 
 .hero-carousel {
-  
+  // position: relative;
+  // height: 500px;
 }
 
 .hero-slide__image-container {
-
+  position: relative;
 }
 
 .hero-slide__image {
   width: 100%;
+  // display: flex;
   filter: brightness(60%);
 }
 
 .hero-slide__title {
-
   position: absolute;
-  bottom: 10%;
+  // bottom: 30%;
   left: 5%;
   text-align: left;
-  transform: translateY(-5rem);
-  font-size: 72px;
+  // font-size: 2rem;
 }
 
 .hero-slide {
-  height: 100vh;
+
 }
