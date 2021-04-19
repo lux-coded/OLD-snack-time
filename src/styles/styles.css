@@ -282,6 +282,20 @@ h2:link {
   border-radius: 10px;
 }
 
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .hero-slide__title {
+    font-size: 3rem;
+    bottom: 10%;
+  }
+
+  .home-carousels {
+    padding: 3rem 5%;
+  }
+
+  .hero-slide {
+    height: 100%;
+  }
+}
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .hero-slide__title {
     font-size: 3rem;
