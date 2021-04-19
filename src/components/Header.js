@@ -7,12 +7,12 @@ class Header extends React.Component {
   render() {
     return (
       <header className='navbar'>
-        <Link to='/' className='nav-logo'>
+        <a href='/' className='nav-logo'>
           <span className="material-icons nav-icon">
             fastfood
           </span>
           <h1>SnackTime</h1>
-        </Link>
+        </a>
         <div className='nav-link-container'>
           <Link to='/' className='nav-link'>User</Link>
           <Link to='/top-rated' className='nav-link'>Top Rated</Link>
