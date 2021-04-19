@@ -177,7 +177,6 @@ h2:link {
 
 .result-card-details {
   user-select: none;
-  padding: 1rem 2rem;
   position: absolute;
   left: 150px;
   overflow: hidden;
@@ -284,8 +283,13 @@ h2:link {
 
 @media screen and (min-width: 300px) and (max-width: 500px) {
   .hero-slide__title {
-    font-size: 3rem;
+    font-size: 2rem;
     bottom: 10%;
+  }
+
+  .result-card-details {
+    font-size: 0.8rem;
+    padding: 1%;
   }
 
   .home-carousels {
@@ -302,6 +306,11 @@ h2:link {
     bottom: 10%;
   }
 
+  .result-card-details {
+    font-size: 0.9rem;
+    padding: 2%;
+  }
+
   .home-carousels {
     padding: 3rem 5%;
   }
@@ -316,6 +325,11 @@ h2:link {
     bottom: 10%;
   }
 
+  .result-card-details {
+    font-size: 0.9rem;
+    padding: 1%;
+  }
+
   .home-carousels {
     padding: 3rem 5%;
   }
@@ -326,24 +340,43 @@ h2:link {
     bottom: 15%;
   }
 
+  .result-card-details {
+    font-size: 1rem;
+    padding: 1% 1%;
+  }
+
   .home-carousels {
     padding: 3rem 5%;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
   .hero-slide__title {
     font-size: 5rem;
     bottom: 15%;
+  }
+
+  .result-card-details {
+    font-size: 1rem;
+    padding: 1% 1%;
+  }
+
+  .result-card-details {
+    font-size: 1.1rem;
   }
 
   .home-carousels {
     padding: 3rem 10%;
   }
 }
-@media (min-width: 1500px) {
+@media screen and (min-width: 1500px) {
   .hero-slide__title {
     font-size: 7rem;
     bottom: 25%;
+  }
+
+  .result-card-details {
+    font-size: 1.1rem;
+    padding: 1% 1%;
   }
 }
 .home-carousels {
