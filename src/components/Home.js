@@ -55,7 +55,7 @@ class Home extends React.Component {
       <div className='search-page'>
 
         <HeroCarousel results={this.props.moviesNowPlaying.results}/>
-        
+
         <div className='search-area'>
           <div>
             <button
@@ -88,6 +88,7 @@ class Home extends React.Component {
               onClick={() => this.pageHandler(this.state.page + 1)}
             >Page {this.state.page + 1}
             </button>
+            <SearchResults searchResults={this.state.searchResults}/>
           </div>
         :
         <div className='home-carousel'>
@@ -101,7 +102,7 @@ class Home extends React.Component {
         </div>
         }
 
-        <SearchResults searchResults={this.state.searchResults}/>
+        {/* <SearchResults searchResults={this.state.searchResults}/> */}
 
         {this.state.searchResults.length > 0 ?
           <div>
