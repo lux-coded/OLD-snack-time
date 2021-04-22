@@ -16,9 +16,12 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.handleMovieFetch();
+    if (this.props.match.params.query) {
+      this.onSubmitHandler();
+    }
   }
 
-  async onSubmitHandler(searchQuery, page = this.state.page) {
+  async onSubmitHandler(searchQuery = this.props.match.params.query, page = this.state.page) {
     this.setState({ searchQuery });
 
     try {
@@ -27,7 +30,6 @@ class Home extends React.Component {
       const { results } = data;
       // console.log(data);
       // console.log(results);
-
       this.setState({ searchResults: [...results], page: data.page });
 
       history.push(`/search/${searchQuery}`);

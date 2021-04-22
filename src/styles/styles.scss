@@ -2,6 +2,11 @@ $main-color: #1e1f29;
 $main-color-darker: #0b0c11;
 $main-color-lighter: #434655;
 $main-color-transparent: rgba(#434655, 0.4);
+$main-gradient: linear-gradient(
+  45deg,
+  rgba(29, 127, 191, 1) 0%,
+  rgba(61, 238, 111, 1) 100%
+);
 $light-color: #51bce4;
 $mainTransition: all 0.07s ease-in-out;
 
@@ -70,11 +75,7 @@ li {
 }
 
 .active-button {
-  background: linear-gradient(
-    45deg,
-    rgba(29, 127, 191, 1) 0%,
-    rgba(61, 238, 111, 1) 100%
-  );
+  background: $main-gradient;
   color: white;
   padding: 0;
   height: 50px;
@@ -118,7 +119,7 @@ li {
 }
 
 .main-button {
-  background: linear-gradient(45deg, rgba(29, 127, 191, 1) 0%, rgba(61, 238, 111, 1) 100%);
+  background: $main-gradient;
   color: white;
   margin: 0 2rem;
   padding: 0;
@@ -152,7 +153,7 @@ li {
 }
 
 .button-active {
-  background: linear-gradient(45deg, rgba(29, 127, 191, 1) 0%, rgba(61, 238, 111, 1) 100%);
+  background: $main-gradient;
 }
 
 .search-input {
@@ -190,7 +191,7 @@ h2 {
     cursor: pointer;
 
     h2 {
-      color: rgb(201, 104, 241);
+      color: $light-color;
     }
   }
 }
@@ -234,7 +235,7 @@ h2 {
 }
 
 .button-page {
-  background: linear-gradient(45deg, rgba(29, 127, 191, 1) 0%, rgba(61, 238, 111, 1) 100%);
+  background: $main-gradient;
   color: white;
   margin: 0 2rem;
   padding: 0;
@@ -257,29 +258,31 @@ h2 {
 }
 
 .movie-info {
-  margin: 0 10%;
-  width: 80%;
-  background-color: $main-color-transparent;
+  padding: 2rem 4rem;
+  // background-color: $main-color-transparent;
   border-radius: 20px;
   display: flex;
   position: absolute;
-  bottom: 25%;
-  /* position: absolute; */
-  /* top: 70%; */
-  /* transform: translateY(-30%); */
+  bottom: 6%;
 }
 
 .movie-details {
   padding: 1rem 2rem;
   width: 80%;
+
+  h1 {
+    font-size: 3.5rem;
+  }
 }
 
 .banner-image-container {
-  text-align: center;
-  
-  img {
-    width: 100%;
-    filter: brightness(60%);
+  // text-align: center;
+  position: relative;
+  height: 100vh;
+
+    .banner-img {
+      width: 100%;
+      filter: brightness(60%);
   }
 }
 

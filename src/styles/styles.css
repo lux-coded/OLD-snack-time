@@ -171,7 +171,7 @@ h2:link {
   cursor: pointer;
 }
 .result-card:hover h2 {
-  color: #c968f1;
+  color: #51bce4;
 }
 
 .result-card-details {
@@ -225,27 +225,26 @@ h2:link {
 }
 
 .movie-info {
-  margin: 0 10%;
-  width: 80%;
-  background-color: rgba(67, 70, 85, 0.4);
+  padding: 2rem 4rem;
   border-radius: 20px;
   display: flex;
   position: absolute;
-  bottom: 25%;
-  /* position: absolute; */
-  /* top: 70%; */
-  /* transform: translateY(-30%); */
+  bottom: 6%;
 }
 
 .movie-details {
   padding: 1rem 2rem;
   width: 80%;
 }
+.movie-details h1 {
+  font-size: 3.5rem;
+}
 
 .banner-image-container {
-  text-align: center;
+  position: relative;
+  height: 100vh;
 }
-.banner-image-container img {
+.banner-image-container .banner-img {
   width: 100%;
   filter: brightness(60%);
 }
