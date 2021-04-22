@@ -3,6 +3,7 @@ import SearchBar from './SearchBar.js';
 import SearchResults from './SearchResults.js';
 import HeroCarousel from './HeroCarousel.js';
 import CarouselCards from './CarouselCards.js';
+import Footer from './Footer.js';
 import history from '../history.js';
 import { connect } from 'react-redux';
 
@@ -122,7 +123,7 @@ class Home extends React.Component {
             </button>
           </div>: null
         }
-
+        <Footer />
       </div>
     );
   }

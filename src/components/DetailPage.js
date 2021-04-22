@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer.js';
 
 class DetailPage extends React.Component {
   state = { details: {}, genreArray: [], tvSeasons: null };
@@ -43,12 +44,15 @@ class DetailPage extends React.Component {
                 <h2>{vote_average}/10</h2>
                 <h2>{this.state.genreArray.join(', ')}</h2>
                 <h3>{release_date}</h3>
-                <h5>{this.props.match.params.mediaType === 'movie' ? `Runtime: ${runtime} minutes` :  `Seasons: ${this.state.tvSeasons}`}</h5>
-                <p>{overview}</p>
+                <h3>{this.props.match.params.mediaType === 'movie' ? `Runtime: ${runtime} minutes` :  `Seasons: ${this.state.tvSeasons}`}</h3>
               </div>
             </div>
         </div>
-
+        <div className='overview'>
+          <h1>Overview</h1>
+          <p className='detail-overview'>{overview}</p>
+        </div>
+        <Footer />
       </div>
     );
   }
