@@ -324,13 +324,34 @@ h2 {
 
 .overview {
   font-size: 1.4rem;
-  padding: 2rem;
+  padding: 2rem 5%;
 }
 
 @media screen and (max-width: 800px) {
   .navbar {
     display: block;
     padding: 2%;
+  }
+
+  .movie-info {
+    padding: 1rem;
+  }
+
+  .movie-details {
+    padding: 0 1rem;
+  }
+
+  .banner-image-container {
+    height: 400px;
+  }
+
+  .detail-result-img {
+    height: 100px;
+    border-radius: 20px;
+  }
+
+  .overview {
+    font-size: 1rem;
   }
 
   .nav-link-container {
@@ -345,6 +366,11 @@ h2 {
 
   .banner-img {
     width: 100%;
+  }
+
+  .detail-result-img {
+    height: 200px;
+    border-radius: 20px;
   }
 
   .hero-slide__title {
@@ -496,7 +522,6 @@ h2 {
     font-size: 5rem;
     bottom: 15%;
   }
-
 
   .detail-result-img {
     height: 400px;
