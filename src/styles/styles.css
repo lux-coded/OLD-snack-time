@@ -300,6 +300,12 @@ h2:link {
   .overview {
     font-size: 1rem;
   }
+
+  footer {
+    padding: 1%;
+    height: 200px;
+    font-size: 0.9rem;
+  }
 }
 @media screen and (min-width: 300px) and (max-width: 500px) {
   .detail-info-container {
@@ -330,6 +336,15 @@ h2:link {
 
   .hero-slide {
     height: 100%;
+  }
+
+  footer {
+    padding: 1rem 5%;
+    height: 200px;
+  }
+
+  .footer-links img {
+    height: 75px;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
@@ -366,6 +381,15 @@ h2:link {
   .hero-slide {
     height: 100%;
   }
+
+  footer {
+    padding: 1rem 10%;
+    height: 300px;
+  }
+
+  .footer-links img {
+    height: 100px;
+  }
 }
 @media screen and (min-width: 800px) and (max-width: 1000px) {
   .hero-slide__title {
@@ -397,6 +421,15 @@ h2:link {
 
   .home-carousels {
     padding: 3rem 5%;
+  }
+
+  footer {
+    padding: 1rem 10%;
+    height: 400px;
+  }
+
+  .footer-links img {
+    height: 100px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
@@ -433,6 +466,15 @@ h2:link {
 
   .home-carousels {
     padding: 3rem 5%;
+  }
+
+  footer {
+    padding: 1rem 10%;
+    height: 400px;
+  }
+
+  .footer-links img {
+    height: 100px;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
@@ -474,6 +516,15 @@ h2:link {
   .home-carousels {
     padding: 3rem 10%;
   }
+
+  footer {
+    padding: 1rem 10%;
+    height: 500px;
+  }
+
+  .footer-links img {
+    height: 100px;
+  }
 }
 @media screen and (min-width: 1500px) {
   .hero-slide__title {
@@ -505,6 +556,15 @@ h2:link {
 
   .navbar {
     padding: 0 20%;
+  }
+
+  footer {
+    padding: 1rem 10%;
+    height: 500px;
+  }
+
+  .footer-links img {
+    height: 100px;
   }
 }
 .home-carousels {
@@ -547,13 +607,8 @@ footer {
   color: #aaaaaa;
   text-align: left;
   align-items: center;
-  padding: 0 15%;
-  height: 400px;
 }
 
-.footer-links img {
-  height: 100px;
-}
 .footer-links .contact-links {
   display: flex;
 }
