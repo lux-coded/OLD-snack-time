@@ -7,18 +7,25 @@ class Header extends React.Component {
   render() {
     return (
       <header className='navbar'>
-        <a href='/' className='nav-logo'>
-          <span className="material-icons nav-icon">
-            fastfood
-          </span>
-          <h1>SnackTime</h1>
-        </a>
+        <span class="material-icons nav-icon nav-menu-icon" onClick={() => document.querySelector('.nav-link-container').classList.toggle('nav-visible')}>
+          menu
+        </span>
+        <div  className='nav-logo-container'>
+          <a href='/' className='nav-logo'>
+            <span className="material-icons nav-icon">
+              fastfood
+            </span>
+            <h1>SnackTime</h1>
+          </a>
+        </div>
+
         <div className='nav-link-container'>
           <Link to='/' className='nav-link'>User</Link>
           <Link to='/top-rated' className='nav-link'>Top Rated</Link>
           <Link to='/popular' className='nav-link'>Popular</Link>
           <Link to='/upcoming' className='nav-link'>Upcoming</Link>
         </div>
+
       </header>
     );
   }
