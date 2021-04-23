@@ -20,7 +20,7 @@ class CarouselCards extends React.Component {
           slidesPerView={7}
           navigation
           loop
-          breakpoints={{1500: {slidesPerView: 7}, 1200: {slidesPerView: 6, spaceBetween: 20}, 1000: {slidesPerView: 5, spaceBetween: 50}, 800: {slidesPerView: 4, spaceBetween: 50}, 600: {slidesPerView: 3, spaceBetween: 10}, 400: {slidesPerView: 2, spaceBetween: 10}}}
+          breakpoints={{1500: {slidesPerView: 7}, 1200: {slidesPerView: 6, spaceBetween: 20}, 1000: {slidesPerView: 5, spaceBetween: 50}, 800: {slidesPerView: 4, spaceBetween: 50}, 600: {slidesPerView: 3, spaceBetween: 10}, 200: {slidesPerView: 2, spaceBetween: 10}}}
             effectfade='true'
                        className='card-slides-container'>
             {this.props.results.map((result) => (
