@@ -311,7 +311,6 @@ h2:link {
 @media screen and (max-width: 800px) {
   .navbar {
     align-items: center;
-    position: fixed;
     width: 100%;
     z-index: 999;
   }
@@ -361,6 +360,11 @@ h2:link {
     border-radius: 20px;
   }
 
+  .search-results {
+    padding: 5%;
+    padding-top: 15%;
+  }
+
   .overview {
     font-size: 1rem;
   }
@@ -396,6 +400,11 @@ h2:link {
   .hero-slide__title {
     font-size: 2rem;
     bottom: 10%;
+  }
+
+  .search-results {
+    padding: 5%;
+    padding-top: 15%;
   }
 
   .result-card-details {

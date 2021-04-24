@@ -356,7 +356,7 @@ h2 {
     // display: inline-block;
     align-items: center;
     // padding: 50%;
-    position: fixed;
+    // position: absolute;
     width: 100%;
     z-index: 999;
   }
@@ -409,6 +409,11 @@ h2 {
     border-radius: 20px;
   }
 
+  .search-results {
+    padding: 5%;
+    padding-top: 15%;
+  }
+
   .overview {
     font-size: 1rem;
   }
@@ -453,6 +458,11 @@ h2 {
   .hero-slide__title {
     font-size: 2rem;
     bottom: 10%;
+  }
+
+  .search-results {
+    padding: 5%;
+    padding-top: 15%;
   }
 
   .result-card-details {
