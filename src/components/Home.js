@@ -12,6 +12,8 @@ import getMoviesTopRated from '../actions/movieActions/getMoviesTopRated';
 import getMoviesUpcoming from '../actions/movieActions/getMoviesUpcoming';
 import getMoviesPopular from '../actions/movieActions/getMoviesPopular';
 
+const api_key = process.env.REACT_APP_API_KEY;
+
 class Home extends React.Component {
   state = { searchResults: [], page: 1, searchType: 'movie', searchQuery: '' };
 
@@ -26,7 +28,7 @@ class Home extends React.Component {
     this.setState({ searchQuery });
 
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/search/${this.state.searchType}?api_key=8c8d65e69723f72aa8f5c0911b107365&query=${searchQuery}&page=${page}`);
+      const response = await fetch(`https://api.themoviedb.org/3/search/${this.state.searchType}?api_key=${api_key}&query=${searchQuery}&page=${page}`);
       const data = await response.json();
       const { results } = data;
       // console.log(data);
@@ -47,10 +49,10 @@ class Home extends React.Component {
 
 
   handleMovieFetch = () => {
-    this.props.getMoviesNowPlaying(`https://api.themoviedb.org/3/movie/now_playing?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
-    this.props.getMoviesTopRated(`https://api.themoviedb.org/3/movie/top_rated?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
-    this.props.getMoviesUpcoming(`https://api.themoviedb.org/3/movie/upcoming?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
-    this.props.getMoviesPopular(`https://api.themoviedb.org/3/movie/popular?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US&page=1`);
+    this.props.getMoviesNowPlaying(`https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}&language=en-US&page=1`);
+    this.props.getMoviesTopRated(`https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}&language=en-US&page=1`);
+    this.props.getMoviesUpcoming(`https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`);
+    this.props.getMoviesPopular(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`);
   }
 
   render() {

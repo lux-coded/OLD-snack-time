@@ -1,12 +1,14 @@
 import React from 'react';
 import SearchResults from './SearchResults.js';
+const api_key = process.env.REACT_APP_API_KEY;
 
 class TopRated extends React.Component {
   state = { topResults: [] };
 
   componentDidMount() {
+    console.log(api_key);
     try {
-      fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=8c8d65e69723f72aa8f5c0911b107365`)
+      fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}`)
       .then(res => res.json())
       .then(result => {
         const { results } = result;

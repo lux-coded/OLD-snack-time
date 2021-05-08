@@ -9,6 +9,9 @@ import Popular from './Popular.js';
 import DetailPage from './DetailPage.js';
 
 class App extends React.Component {
+  componentDidMount() {
+    console.log(process.env);
+  }
 
   render() {
     return (

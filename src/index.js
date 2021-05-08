@@ -5,6 +5,8 @@ import App from './components/App.js';
 import store from './store.js';
 import './styles/styles.css';
 
+require('dotenv').config();
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

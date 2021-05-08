@@ -1,11 +1,12 @@
 import React from 'react';
 import Footer from './Footer.js';
+const api_key = process.env.REACT_APP_API_KEY;
 
 class DetailPage extends React.Component {
   state = { details: {}, genreArray: [], tvSeasons: null };
   componentDidMount() {
     try {
-      fetch(`https://api.themoviedb.org/3/${this.props.match.params.mediaType}/${this.props.match.params.id}?api_key=8c8d65e69723f72aa8f5c0911b107365&language=en-US`)
+      fetch(`https://api.themoviedb.org/3/${this.props.match.params.mediaType}/${this.props.match.params.id}?api_key=${api_key}&language=en-US`)
       .then(res => res.json())
       .then(result => {
         this.setState({ details: result });

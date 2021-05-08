@@ -1,12 +1,13 @@
 import React from 'react';
 import SearchResults from './SearchResults.js';
+const api_key = process.env.REACT_APP_API_KEY;
 
 class Upcoming extends React.Component {
   state = { upcomingResults: [] };
 
   componentDidMount() {
     try {
-      fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=8c8d65e69723f72aa8f5c0911b107365`)
+      fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}`)
       .then(res => res.json())
       .then(result => {
         // console.log(result);
