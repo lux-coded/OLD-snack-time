@@ -14,18 +14,9 @@ class HeroCarousel extends React.Component {
 
       <div className='hero-carousel'>
         <Swiper
-          // spaceBetween={50}
           slidesPerView={1}
-          // navigation
-          // direction='vertical'
-          // mouseWheel='true'
-          // freemode={true}
           loop
-          // speed={200}
           autoplay={{ delay: 4000 }}
-          effectfade='true'
-          // pagination={{ clickable: true }}
-          // scrollbar={{ draggable: true }}
         >
           {this.props.results.map((result) => (
 
