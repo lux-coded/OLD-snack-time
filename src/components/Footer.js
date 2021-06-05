@@ -7,8 +7,8 @@ class Footer extends React.Component {
       <footer className='footer'>
         <div className='footer-contact-info'>
           <h1>SnackTime</h1>
-          <h3>Portfolio</h3>
-          <h3>E-Mail</h3>
+          <h3>Portfolio:</h3><a href='https://luka-selak.netlify.app/'>https://luka-selak.netlify.app/</a>
+          <h3>selakluka@gmail.com</h3>
           <p>Copyright ©2020</p>
           <p>Design and code by Luka Selak</p>
         </div>

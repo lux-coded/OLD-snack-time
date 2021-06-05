@@ -20,7 +20,6 @@ class Header extends React.Component {
         </div>
 
         <div className='nav-link-container'>
-          <Link to='/' className='nav-link'>User</Link>
           <Link to='/top-rated' className='nav-link'>Top Rated</Link>
           <Link to='/popular' className='nav-link'>Popular</Link>
           <Link to='/upcoming' className='nav-link'>Upcoming</Link>

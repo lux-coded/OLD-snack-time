@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "dotenv": "^9.0.0",
     "glider-js": "^1.7.7",
+    "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-glider": "^2.1.0",

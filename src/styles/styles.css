@@ -169,8 +169,11 @@ li {
 }
 
 .search-results {
-  padding: 0 5%;
-  padding-top: 2rem;
+  padding: 0 2.5%;
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem 2rem;
 }
 
 h2:link {
@@ -196,6 +199,7 @@ h2:link {
 
 .result-card-details {
   user-select: none;
+  padding: 1rem;
   position: absolute;
   left: 150px;
   overflow: hidden;
@@ -220,7 +224,6 @@ h2:link {
 .result-img {
   height: 100%;
   border-radius: 1rem;
-  /* overflow: hidden; */
 }
 
 .button-page {
@@ -265,7 +268,6 @@ h2:link {
 }
 
 .swiper-container {
-  /* padding: 1rem; */
   text-decoration: none;
 }
 .swiper-container a {
@@ -337,6 +339,7 @@ h2:link {
     background: #0b0c11;
     text-align: center;
     top: -200px;
+    z-index: 999;
   }
 
   .nav-link {
@@ -362,7 +365,7 @@ h2:link {
 
   .search-results {
     padding: 5%;
-    padding-top: 15%;
+    padding-top: 5%;
   }
 
   .overview {
@@ -403,12 +406,8 @@ h2:link {
   }
 
   .search-results {
-    padding: 5%;
-    padding-top: 15%;
-  }
-
-  .result-card-details {
-    font-size: 0.8rem;
+    padding-top: 5%;
+    grid-template-columns: 1fr;
   }
 
   .home-carousels {
@@ -448,7 +447,7 @@ h2:link {
   }
 
   .result-card-details {
-    font-size: 0.9rem;
+    padding: 2%;
   }
 
   .navbar {
@@ -492,7 +491,6 @@ h2:link {
   }
 
   .result-card-details {
-    font-size: 0.9rem;
     padding: 1%;
   }
 
@@ -537,7 +535,6 @@ h2:link {
   }
 
   .result-card-details {
-    font-size: 1rem;
     padding: 1% 1%;
   }
 
@@ -582,16 +579,11 @@ h2:link {
   }
 
   .result-card-details {
-    font-size: 1rem;
     padding: 1% 1%;
   }
 
   .navbar {
     padding: 0.5rem 15%;
-  }
-
-  .result-card-details {
-    font-size: 1.1rem;
   }
 
   .home-carousels {
@@ -631,7 +623,6 @@ h2:link {
   }
 
   .result-card-details {
-    font-size: 1.1rem;
     padding: 1% 1%;
   }
 
@@ -689,12 +680,27 @@ footer {
   text-align: left;
   align-items: center;
 }
+footer a {
+  color: #51bce4;
+}
 
 .footer-links img:hover {
   transform: scale(1.03);
 }
 .footer-links .contact-links {
   display: flex;
+}
+
+@media screen and (max-width: 1500px) {
+  .search-results {
+    padding-top: 5%;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .result-card-description {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
